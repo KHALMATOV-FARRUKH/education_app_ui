@@ -16,21 +16,21 @@ class HomeScreen extends StatelessWidget {
     ];
 
     List<Color> catColors = [
-      Color(0xFFFFCF2F),
-      Color(0xFF6FE08D),
-      Color(0xFF618DFD),
-      Color(0xFFFC7F7F),
-      Color(0xFFCB84FB),
-      Color(0xFF78E667),
+      const Color(0xFFFFCF2F),
+      const Color(0xFF6FE08D),
+      const Color(0xFF618DFD),
+      const Color(0xFFFC7F7F),
+      const Color(0xFFCB84FB),
+      const Color(0xFF78E667),
     ];
 
     List<Icon> catIcons = [
-      Icon(Icons.category, color: Colors.white, size: 30),
-      Icon(Icons.video_library, color: Colors.white, size: 30),
-      Icon(Icons.assessment, color: Colors.white, size: 30),
-      Icon(Icons.store, color: Colors.white, size: 30),
-      Icon(Icons.play_circle_fill, color: Colors.white, size: 30),
-      Icon(Icons.emoji_events, color: Colors.white, size: 30),
+      const Icon(Icons.category, color: Colors.white, size: 30),
+      const Icon(Icons.video_library, color: Colors.white, size: 30),
+      const Icon(Icons.assessment, color: Colors.white, size: 30),
+      const Icon(Icons.store, color: Colors.white, size: 30),
+      const Icon(Icons.play_circle_fill, color: Colors.white, size: 30),
+      const Icon(Icons.emoji_events, color: Colors.white, size: 30),
     ];
 
     List imgList = [
@@ -44,8 +44,8 @@ class HomeScreen extends StatelessWidget {
       body: ListView(
         children: [
           Container(
-            padding: EdgeInsets.only(top: 15, left: 15, right: 15, bottom: 10),
-            decoration: BoxDecoration(
+            padding: const EdgeInsets.only(top: 15, left: 15, right: 15, bottom: 10),
+            decoration: const BoxDecoration(
               color: Color(0xFF674AEF),
               borderRadius: BorderRadius.only(
                   bottomLeft: Radius.circular(20),
@@ -56,7 +56,7 @@ class HomeScreen extends StatelessWidget {
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
+                  children: const [
                     Icon(
                       Icons.dashboard,
                       size: 30,
@@ -69,8 +69,8 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(height: 20),
-                Padding(
+                const SizedBox(height: 20),
+                const Padding(
                   padding: EdgeInsets.only(left: 3, bottom: 15),
                   child: Text(
                     "Hi, Programmer",
@@ -84,7 +84,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.only(top: 5, bottom: 20),
+                  margin: const EdgeInsets.only(top: 5, bottom: 20),
                   width: MediaQuery.of(context).size.width,
                   height: 55,
                   alignment: Alignment.center,
@@ -99,7 +99,7 @@ class HomeScreen extends StatelessWidget {
                       hintStyle: TextStyle(
                         color: Colors.black.withOpacity(0.5),
                       ),
-                      prefixIcon: Icon(Icons.search, size: 25),
+                      prefixIcon: const Icon(Icons.search, size: 25),
                     ),
                   ),
                 ),
@@ -107,14 +107,14 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(top: 20, left: 15, right: 15),
+            padding: const EdgeInsets.only(top: 20, left: 15, right: 15),
             child: Column(
               children: [
                 GridView.builder(
                   itemCount: catNames.length,
                   shrinkWrap: true,
-                  physics: NeverScrollableScrollPhysics(),
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  physics: const NeverScrollableScrollPhysics(),
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 3,
                     childAspectRatio: 1.1,
                   ),
@@ -132,7 +132,7 @@ class HomeScreen extends StatelessWidget {
                             child: catIcons[index],
                           ),
                         ),
-                        SizedBox(height: 10),
+                        const SizedBox(height: 10),
                         Text(
                           catNames[index],
                           style: TextStyle(
@@ -147,7 +147,7 @@ class HomeScreen extends StatelessWidget {
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
+                  children: const [
                     Text(
                       "Courses",
                       style: TextStyle(
@@ -165,11 +165,11 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 GridView.builder(
                   itemCount: imgList.length,
                   shrinkWrap: true,
-                  physics: NeverScrollableScrollPhysics(),
+                  physics: const NeverScrollableScrollPhysics(),
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,
                     childAspectRatio:
@@ -190,22 +190,22 @@ class HomeScreen extends StatelessWidget {
                       },
                       child: Container(
                         padding:
-                            EdgeInsets.symmetric(vertical: 20, horizontal: 10),
+                        const EdgeInsets.symmetric(vertical: 20, horizontal: 10),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
-                          color: Color(0xFFF5F3FF),
+                          color: const Color(0xFFF5F3FF),
                         ),
                         child: Column(
                           children: [
                             Padding(
-                              padding: EdgeInsets.all(10),
+                              padding: const EdgeInsets.all(10),
                               child: Image.asset(
                                 "assets/images/${imgList[index]}.png",
                                 width: 100,
                                 height: 100,
                               ),
                             ),
-                            SizedBox(height: 10),
+                            const SizedBox(height: 10),
                             Text(
                               imgList[index],
                               style: TextStyle(
@@ -214,7 +214,7 @@ class HomeScreen extends StatelessWidget {
                                 color: Colors.black.withOpacity(0.6),
                               ),
                             ),
-                            SizedBox(height: 10),
+                            const SizedBox(height: 10),
                             Text(
                               "55 Videos",
                               style: TextStyle(
@@ -237,10 +237,10 @@ class HomeScreen extends StatelessWidget {
       bottomNavigationBar: BottomNavigationBar(
         showUnselectedLabels: true,
         iconSize: 32,
-        selectedItemColor: Color(0xFF674AEF),
+        selectedItemColor: const Color(0xFF674AEF),
         selectedFontSize: 18,
         unselectedItemColor: Colors.green,
-        items: [
+        items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
           BottomNavigationBarItem(
               icon: Icon(Icons.assessment), label: "Courses"),
